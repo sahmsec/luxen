@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function JournalPage() {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="min-h-screen">
       <EditorialLookbook />
       
       <section className="py-24 px-6 md:px-12 bg-navy text-softwhite">

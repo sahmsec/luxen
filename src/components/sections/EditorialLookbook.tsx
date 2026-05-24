@@ -49,7 +49,9 @@ export default function EditorialLookbook() {
                 src="/ren-3.png"
                 alt="Precision Detail"
                 fill
-                className="object-cover object-center group-hover:scale-110 transition-transform duration-1000"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-1000"
+                unoptimized
+                priority
               />
             </motion.div>
 
