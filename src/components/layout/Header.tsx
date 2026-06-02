@@ -5,12 +5,14 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import { usePathname } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { totalItems } = useCart();
   const pathname = usePathname();
+  const { data: session } = authClient.useSession();
 
   useEffect(() => {
     setMenuOpen(false);
@@ -84,6 +86,23 @@ export default function Header() {
               <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${navLineColor}`}></span>
             </Link>
           ))}
+          {session ? (
+            <>
+              <Link href="/orders" className={`${navTextColor} ${navHoverColor} transition-colors relative group`}>
+                Orders
+                <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${navLineColor}`}></span>
+              </Link>
+              <Link href="/profile" className={`${navTextColor} ${navHoverColor} transition-colors relative group`}>
+                Profile
+                <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${navLineColor}`}></span>
+              </Link>
+            </>
+          ) : (
+            <Link href="/login" className={`${navTextColor} ${navHoverColor} transition-colors relative group`}>
+              Sign In
+              <span className={`absolute -bottom-1 left-0 w-0 h-[1px] transition-all duration-300 group-hover:w-full ${navLineColor}`}></span>
+            </Link>
+          )}
         </nav>
 
         <div className="flex items-center gap-4">
