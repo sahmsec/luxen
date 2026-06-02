@@ -47,7 +47,7 @@ export default function ProfilePage() {
         address: formData.address,
         city: formData.city,
         zipCode: formData.zipCode,
-      });
+      } as any);
 
       if (error) throw new Error(error.message);
 
