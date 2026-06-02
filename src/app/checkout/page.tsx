@@ -29,10 +29,10 @@ export default function CheckoutPage() {
     } else if (session?.user && useProfileAddress) {
       setFormData({
         name: session.user.name || "",
-        address: session.user.address || "",
-        city: session.user.city || "",
-        zipCode: session.user.zipCode || "",
-        phone: session.user.phoneNumber || "",
+        address: (session.user as any).address || "",
+        city: (session.user as any).city || "",
+        zipCode: (session.user as any).zipCode || "",
+        phone: (session.user as any).phoneNumber || "",
       });
     }
   }, [session, isPending, useProfileAddress, router]);

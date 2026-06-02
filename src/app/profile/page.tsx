@@ -25,10 +25,10 @@ export default function ProfilePage() {
     } else if (session?.user) {
       setFormData({
         name: session.user.name || "",
-        phoneNumber: session.user.phoneNumber || "",
-        address: session.user.address || "",
-        city: session.user.city || "",
-        zipCode: session.user.zipCode || "",
+        phoneNumber: (session.user as any).phoneNumber || "",
+        address: (session.user as any).address || "",
+        city: (session.user as any).city || "",
+        zipCode: (session.user as any).zipCode || "",
       });
     }
   }, [session, isPending, router]);
