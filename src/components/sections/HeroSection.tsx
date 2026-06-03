@@ -15,7 +15,7 @@ const HUDGrid = ({ className }: { className?: string }) => (
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-navy flex flex-col justify-end pb-8">
+    <section className="relative w-full min-h-[600px] xl:min-h-0 xl:h-screen overflow-hidden bg-navy flex flex-col justify-end pb-8">
       {/* Background Image - Close up model */}
       <motion.div 
         initial={{ scale: 1.05 }}
