@@ -2,7 +2,7 @@
 
 import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 
 export default function CartPage() {
   const { items, removeFromCart, totalPrice } = useCart();
@@ -33,7 +33,7 @@ export default function CartPage() {
           {items.map((item) => (
             <div key={item.id} className="flex flex-col sm:flex-row gap-6 items-center bg-white p-6 rounded-xl shadow-sm border border-navy/5">
               <div className="relative w-32 h-32 bg-[#f8fafc] rounded-md overflow-hidden flex-shrink-0">
-                <Image src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
+                <ImageWithSpinner src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-heading font-bold uppercase">{item.name}</h3>

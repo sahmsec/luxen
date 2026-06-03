@@ -1,7 +1,7 @@
 "use client";
 
 import { use } from "react";
-import Image from "next/image";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 import { products } from "@/lib/products";
 import { notFound, useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
@@ -26,7 +26,7 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-[#f8fafc] border border-navy/5">
-            <Image
+            <ImageWithSpinner
               src={product.image}
               alt={product.name}
               fill

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 import { products } from "@/lib/products";
 
 export default function ShopPage() {
@@ -19,7 +19,7 @@ export default function ShopPage() {
           {products.map((product) => (
             <Link href={`/shop/${product.id}`} key={product.id} className="group cursor-pointer flex flex-col">
               <div className="relative aspect-square w-full overflow-hidden bg-white shadow-sm rounded-lg mb-6 border border-navy/5">
-                <Image
+                <ImageWithSpinner
                   src={product.image}
                   alt={product.name}
                   fill

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 import Link from "next/link";
 
 type OrderItem = {
@@ -118,7 +118,7 @@ export default function OrdersPage() {
                     {order.items.map((item, idx) => (
                       <div key={idx} className="flex gap-6 items-center">
                         <div className="relative w-20 h-20 bg-[#f8fafc] rounded-md overflow-hidden flex-shrink-0">
-                          <Image src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
+                          <ImageWithSpinner src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-sm font-heading font-bold uppercase mb-1">{item.name}</h3>

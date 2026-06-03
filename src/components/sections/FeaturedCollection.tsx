@@ -1,17 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-
-const products = [
-  { id: 1, name: "Shadow Titanium", price: "$450", image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&q=80&w=800" },
-  { id: 2, name: "Crystal Edge", price: "$380", image: "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&q=80&w=800" },
-  { id: 3, name: "AirFrame", price: "$520", image: "https://images.unsplash.com/photo-1508296695146-257a814050b4?auto=format&fit=crop&q=80&w=800" },
-  { id: 4, name: "Nova Series", price: "$490", image: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&q=80&w=800" },
-];
+import { products } from "@/lib/products";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 
 export default function FeaturedCollection() {
+  const featuredProducts = products.slice(0, 4);
   return (
     <section id="collections" className="py-32 px-6 md:px-12 bg-softwhite text-navy">
       <div className="container mx-auto">
@@ -32,7 +27,7 @@ export default function FeaturedCollection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, index) => (
+          {featuredProducts.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 50 }}
@@ -42,7 +37,7 @@ export default function FeaturedCollection() {
               className="group cursor-pointer"
             >
               <div className="relative aspect-[3/4] mb-6 overflow-hidden bg-[#e0e5ec] rounded-sm">
-                <Image
+                <ImageWithSpinner
                   src={product.image}
                   alt={product.name}
                   fill
@@ -55,7 +50,7 @@ export default function FeaturedCollection() {
               </div>
               <div className="flex justify-between items-center font-heading">
                 <h3 className="text-xl font-bold uppercase">{product.name}</h3>
-                <span className="text-lg text-navy/70">{product.price}</span>
+                <span className="text-lg text-navy/70">${product.price}</span>
               </div>
             </motion.div>
           ))}

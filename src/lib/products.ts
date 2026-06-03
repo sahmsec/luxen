@@ -8,85 +8,130 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  // Sports Glasses
   {
     id: "g-001",
-    name: "AERO-X1 Silver",
-    price: 450,
-    description: "Sleek silver titanium frame with gradient blue lenses. Engineered for extreme lightweight comfort and aerodynamic precision.",
-    image: "/glass_01_1779621806544.png",
-    category: "Performance"
+    name: "Velocity Pro Shield",
+    price: 320,
+    description: "Aerodynamic cycling sports glasses with a sleek, futuristic design and mirrored lenses.",
+    image: "/velocity_pro_shield_1780479575696.png",
+    category: "Sports"
   },
   {
     id: "g-002",
-    name: "AERO-X1 Obsidian",
-    price: 450,
-    description: "Dark titanium frame with deep black lenses. Stealthy, light, and perfectly balanced.",
-    image: "/glass_01_1779621806544.png",
-    category: "Performance"
+    name: "Endurance Tracker",
+    price: 280,
+    description: "Lightweight running sunglasses with polarized bright tinted lenses and a neon accent frame.",
+    image: "/endurance_tracker_1780479590009.png",
+    category: "Sports"
   },
   {
     id: "g-003",
-    name: "BLOCK-M Matte",
-    price: 520,
-    description: "Thick matte black acetate frame in a bold geometric shape. A statement piece that redefines face architecture.",
-    image: "/glass_02_1779621838780.png",
-    category: "Statement"
+    name: "Alpine Summit",
+    price: 350,
+    description: "High-performance snow sports goggles with a large frameless mirror finish lens.",
+    image: "/alpine_summit_1780479603067.png",
+    category: "Sports"
   },
   {
     id: "g-004",
-    name: "BLOCK-M Gloss",
-    price: 520,
-    description: "High-gloss black acetate with striking structural angles. For those who command the room.",
-    image: "/glass_02_1779621838780.png",
-    category: "Statement"
+    name: "Aqua Sprint",
+    price: 260,
+    description: "Water sports polarized sunglasses with a matte navy blue frame and deep blue lenses.",
+    image: "/aqua_sprint_1780479615905.png",
+    category: "Sports"
   },
   {
     id: "g-005",
-    name: "RIMLESS EDGE Chrome",
-    price: 680,
-    description: "Ultra-minimalist rimless design with chrome details and sharp orange tinted lenses. Retro-futurism at its finest.",
-    image: "/glass_03_1779622002752.png",
-    category: "Avant-Garde"
+    name: "Court Master",
+    price: 310,
+    description: "Ultra-lightweight court sports glasses with an ergonomic titanium frame and clear amber lenses.",
+    image: "/court_master_1780479631215.png",
+    category: "Sports"
   },
+
+  // Sun Glasses
   {
     id: "g-006",
-    name: "RIMLESS EDGE Gold",
-    price: 720,
-    description: "24k gold-plated accents on a rimless chassis, featuring warm amber lenses.",
-    image: "/glass_03_1779622002752.png",
-    category: "Avant-Garde"
+    name: "Riviera Classic",
+    price: 450,
+    description: "Timeless luxury tortoise shell sunglasses with dark green lenses.",
+    image: "/riviera_classic_1780479656897.png",
+    category: "Sun"
   },
   {
     id: "g-007",
-    name: "CRYSTAL VISION",
-    price: 390,
-    description: "Translucent crystal frame paired with reflective silver lenses. A pure, unobstructed aesthetic.",
-    image: "/glass_04_1779622422718.png",
-    category: "Minimalist"
+    name: "Aviator Elite",
+    price: 520,
+    description: "Gold-rimmed classic aviator sunglasses with gradient brown lenses. Sleek and sophisticated.",
+    image: "/aviator_elite_1780479669263.png",
+    category: "Sun"
   },
   {
     id: "g-008",
-    name: "CRYSTAL ICE",
-    price: 390,
-    description: "Frosted white acetate frame with icy blue polarized lenses.",
-    image: "/glass_04_1779622422718.png",
-    category: "Minimalist"
+    name: "Midnight Geometric",
+    price: 480,
+    description: "Thick black frame angular geometric sunglasses with completely opaque black lenses.",
+    image: "/midnight_geometric_1780479681819.png",
+    category: "Sun"
   },
   {
     id: "g-009",
-    name: "NEON SHIELD",
-    price: 850,
-    description: "Oversized shield style wrapping the face, accented with neon green details and impenetrable dark lenses.",
-    image: "/glass_05_1779622488480.png",
-    category: "Limited Edition"
+    name: "Sunset Gradient",
+    price: 490,
+    description: "Oversized round sunglasses with a delicate rose gold frame and warm sunset gradient lenses.",
+    image: "/sunset_gradient_1780479695581.png",
+    category: "Sun"
   },
   {
     id: "g-010",
-    name: "NEON SHIELD Ghost",
-    price: 850,
-    description: "The oversized shield reimagined with white accents and silver mirror wrap-around lenses.",
-    image: "/glass_05_1779622488480.png",
-    category: "Limited Edition"
+    name: "Urban Wayfarer",
+    price: 380,
+    description: "Modern matte gray wayfarer sunglasses with subtle silver accents and dark grey lenses.",
+    image: "/urban_wayfarer_1780479709018.png",
+    category: "Sun"
+  },
+
+  // Power Glasses
+  {
+    id: "g-011",
+    name: "Executive Titanium",
+    price: 550,
+    description: "Minimalist rimless prescription eyeglasses with ultra-thin silver titanium temples.",
+    image: "/executive_titanium_1780479728282.png",
+    category: "Power"
+  },
+  {
+    id: "g-012",
+    name: "Academic Tortoise",
+    price: 390,
+    description: "Classic round tortoise shell optical glasses with clear prescription lenses.",
+    image: "/academic_tortoise_1780479741322.png",
+    category: "Power"
+  },
+  {
+    id: "g-013",
+    name: "Architect Square",
+    price: 420,
+    description: "Bold, thick square black acetate frame optical glasses with clear lenses.",
+    image: "/architect_square_1780479754849.png",
+    category: "Power"
+  },
+  {
+    id: "g-014",
+    name: "Creative Clear",
+    price: 370,
+    description: "Transparent crystal clear acetate frame prescription glasses. Contemporary and airy.",
+    image: "/creative_clear_1780479766609.png",
+    category: "Power"
+  },
+  {
+    id: "g-015",
+    name: "Vintage Browline",
+    price: 460,
+    description: "Retro clubmaster-style browline optical glasses with black upper frames and gold lower rims.",
+    image: "/vintage_browline_1780479778495.png",
+    category: "Power"
   }
 ];
 

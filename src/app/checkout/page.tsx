@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
-import Image from "next/image";
+import ImageWithSpinner from "@/components/ImageWithSpinner";
 
 export default function CheckoutPage() {
   const { data: session, isPending } = authClient.useSession();
@@ -90,7 +90,7 @@ export default function CheckoutPage() {
               {items.map((item) => (
                 <div key={item.id} className="flex gap-4 items-center bg-white p-4 rounded-xl shadow-sm border border-navy/5">
                   <div className="relative w-16 h-16 bg-[#f8fafc] rounded-md overflow-hidden">
-                    <Image src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
+                    <ImageWithSpinner src={item.image} alt={item.name} fill className="object-cover mix-blend-multiply" unoptimized />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-sm font-heading font-bold uppercase">{item.name}</h3>
